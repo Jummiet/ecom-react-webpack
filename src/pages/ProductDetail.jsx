@@ -364,7 +364,7 @@ export default function ProductDetail() {
             }}>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span style={{ color: 'var(--primary)' }}>✓</span>
-                <span>Free shipping on orders over ₦50,000</span>
+                <span>Free shipping on orders over $500</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span style={{ color: 'var(--primary)' }}>✓</span>
