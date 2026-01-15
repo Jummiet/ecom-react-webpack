@@ -64,7 +64,7 @@ export const products = [
   },
   {
     id: 8,
-    title: '4k Wbcam',
+    title: '4k Webcam',
     price: 199.99,
     category: 'Electronics',
     description: 'Ultra HD webcam with auto-focus, built-in microphone, and professional video quality.',
