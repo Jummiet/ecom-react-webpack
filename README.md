@@ -27,6 +27,7 @@ Before you begin, ensure you have the following installed:
 - **Git**: For version control ([Download](https://git-scm.com/))
 
 Check your versions:
+
 ```bash
 node --version
 npm --version
@@ -49,6 +50,7 @@ npm install
 ```
 
 This will install all required dependencies listed in `package.json`, including:
+
 - React and React Router for the UI framework
 - Webpack and loaders for bundling
 - Babel for JavaScript transpilation
@@ -64,12 +66,14 @@ npm run dev
 ```
 
 This command:
+
 1. Starts Webpack Dev Server with Hot Module Replacement (HMR)
 2. Opens the application at `http://localhost:5173`
 3. Watches for file changes and automatically reloads the browser
 4. Provides source maps for easier debugging
 
 The development server includes:
+
 - **Fast refresh**: Changes appear instantly without full page reload
 - **Error overlay**: Build errors and warnings appear in the browser
 - **HTTPS support**: Enable with environment variables if needed
@@ -95,6 +99,7 @@ npm run build
 ```
 
 This command:
+
 1. Cleans the previous build output
 2. Optimizes and minifies JavaScript with Webpack
 3. Processes CSS with PostCSS and Autoprefixer
@@ -102,6 +107,7 @@ This command:
 5. Creates source maps for debugging production issues
 
 **Build Output:**
+
 - `dist/index.html` - Main HTML file
 - `dist/bundle.[hash].js` - Main JavaScript bundle
 - `dist/[chunk].[hash].js` - Code-split chunks
@@ -134,6 +140,7 @@ npm test
 ```
 
 This runs Jest in watch mode, which:
+
 - Executes all test files matching `*.test.js(x)` pattern
 - Re-runs tests when files change
 - Shows coverage information
@@ -183,7 +190,7 @@ test('renders button with text', () => {
 
 ## Project Structure
 
-```
+```text
 ecom-react-webpack/
 ├── public/                 # Static files
 │   └── index.html         # HTML template
@@ -245,7 +252,7 @@ This project follows the **Atomic Design** methodology:
 - **PostCSS**: CSS transformation with Autoprefixer
 - **Webpack Dev Server**: Fast development experience
 
-### Testing
+### Testing Stack
 
 - **Jest**: JavaScript testing framework
 - **@testing-library/react**: React component testing utilities
@@ -273,7 +280,7 @@ This project follows the **Atomic Design** methodology:
 ### ⚡ Performance
 
 - **Code splitting**: Routes are lazy-loaded to reduce initial bundle size
-- **Image optimization**: 
+- **Image optimization**:
   - `loading="lazy"` for off-screen images
   - Explicit `width` and `height` to prevent layout shift (CLS)
 - **Tree shaking**: Unused code is automatically removed
@@ -292,7 +299,7 @@ This project follows the **Atomic Design** methodology:
 ## Scripts Reference
 
 | Command | Description |
-|---------|-------------|
+| ------- | ----------- |
 | `npm install` | Install all dependencies |
 | `npm run dev` | Start development server on port 5173 |
 | `npm run build` | Create production build in `dist/` |
@@ -337,6 +344,7 @@ API_URL=http://localhost:3000/api
 ```
 
 Access in code:
+
 ```javascript
 const apiUrl = process.env.API_URL;
 ```
@@ -359,6 +367,7 @@ lsof -ti:5173 | xargs kill -9
 ```
 
 Or change the port in `webpack.config.js`:
+
 ```javascript
 devServer: {
   port: 3000, // Change to any available port
@@ -397,10 +406,13 @@ npm run build
 #### Tests Failing
 
 1. Clear Jest cache:
+
    ```bash
    npm test -- --clearCache
    ```
+
 2. Update snapshots if needed:
+
    ```bash
    npm test -- -u
    ```
@@ -417,18 +429,25 @@ npm run build
 Contributions are welcome! Please follow these steps:
 
 1. **Fork the repository**
+
 2. **Create a feature branch**:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
 3. **Make your changes** and commit:
+
    ```bash
    git commit -m "Add: your feature description"
    ```
+
 4. **Push to your fork**:
+
    ```bash
    git push origin feature/your-feature-name
    ```
+
 5. **Open a Pull Request**
 
 ### Code Style Guidelines
@@ -443,7 +462,7 @@ Contributions are welcome! Please follow these steps:
 
 ### Commit Message Format
 
-```
+```text
 Type: Brief description
 
 Detailed description (optional)
